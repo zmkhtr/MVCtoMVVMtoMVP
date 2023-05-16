@@ -9,14 +9,27 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-    private var persons: [Person] = [
-        Person(name: "Person 1", age: 23, image: UIImage(systemName: "person")!),
-        Person(name: "Person 2", age: 12, image: UIImage(systemName: "star")!),
-    ]
+    private let loader = PersonLoader()
+    private var persons: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        load()
+    }
+    
+    func load() {
+        loader.load { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(persons):
+                self.persons = persons
+                self.tableView.reloadData()
+            case let .failure(error):
+                print("Handle \(error)")
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
