@@ -9,5 +9,6 @@ import Foundation
 
 class PersonViewModel {
     
+    private let loader = PersonLoader()
 
 }

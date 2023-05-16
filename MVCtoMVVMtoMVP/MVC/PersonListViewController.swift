@@ -9,7 +9,6 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-    private let loader = PersonLoader()
     private var persons: [Person] = []
     
     public lazy var refreshController: UIRefreshControl = {
