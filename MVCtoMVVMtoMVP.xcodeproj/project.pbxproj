@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		206AD12E2A133BDA00FB207F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AD12D2A133BDA00FB207F /* Person.swift */; };
 		206AD1302A133C4900FB207F /* PersonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AD12F2A133C4900FB207F /* PersonLoader.swift */; };
-		206AD1332A13548300FB207F /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AD1322A13548300FB207F /* PersonViewModel.swift */; };
+		206AD1332A13548300FB207F /* PersonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AD1322A13548300FB207F /* PersonPresenter.swift */; };
 		20DE88CA2A12041000C23631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88C92A12041000C23631 /* AppDelegate.swift */; };
 		20DE88CC2A12041000C23631 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88CB2A12041000C23631 /* SceneDelegate.swift */; };
 		20DE88CE2A12041000C23631 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88CD2A12041000C23631 /* PersonListViewController.swift */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		206AD12D2A133BDA00FB207F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		206AD12F2A133C4900FB207F /* PersonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonLoader.swift; sourceTree = "<group>"; };
-		206AD1322A13548300FB207F /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		206AD1322A13548300FB207F /* PersonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPresenter.swift; sourceTree = "<group>"; };
 		20DE88C62A12041000C23631 /* MVCtoMVVMtoMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCtoMVVMtoMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE88C92A12041000C23631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DE88CB2A12041000C23631 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 				20DE88CD2A12041000C23631 /* PersonListViewController.swift */,
 				206AD12D2A133BDA00FB207F /* Person.swift */,
 				206AD12F2A133C4900FB207F /* PersonLoader.swift */,
-				206AD1322A13548300FB207F /* PersonViewModel.swift */,
+				206AD1322A13548300FB207F /* PersonPresenter.swift */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 				20DE88CE2A12041000C23631 /* PersonListViewController.swift in Sources */,
 				206AD1302A133C4900FB207F /* PersonLoader.swift in Sources */,
 				20DE88CA2A12041000C23631 /* AppDelegate.swift in Sources */,
-				206AD1332A13548300FB207F /* PersonViewModel.swift in Sources */,
+				206AD1332A13548300FB207F /* PersonPresenter.swift in Sources */,
 				206AD12E2A133BDA00FB207F /* Person.swift in Sources */,
 				20DE88CC2A12041000C23631 /* SceneDelegate.swift in Sources */,
 			);
