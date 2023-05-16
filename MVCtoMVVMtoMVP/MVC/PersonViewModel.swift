@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol PersonViewDelegate: AnyObject {
+    func onLoadingStateChange(isLoading: Bool)
+    func onErrorStateChange(error: String?)
+    func onPersonsLoad(persons: [Person])
+}
+
 class PersonViewModel {
     typealias Observer<T> = (T) -> Void
 
