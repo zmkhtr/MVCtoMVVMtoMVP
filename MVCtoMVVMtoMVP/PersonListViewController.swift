@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PersonListViewController.swift
 //  MVCtoMVVMtoMVP
 //
 //  Created by Azam Mukhtar on 15/05/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PersonListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
