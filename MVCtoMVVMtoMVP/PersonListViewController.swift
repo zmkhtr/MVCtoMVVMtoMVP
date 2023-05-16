@@ -11,15 +11,23 @@ class PersonListViewController: UITableViewController {
     
     private let loader = PersonLoader()
     private var persons: [Person] = []
-
+    
+    public lazy var refreshController: UIRefreshControl = {
+        let refreshControl = UIRefreshControl(frame: .zero)
+        refreshControl.addTarget(self, action: #selector(self.load), for: .valueChanged)
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableView.refreshControl = refreshController
+
         load()
     }
     
-    func load() {
+    @objc func load() {
         loader.load { [weak self] result in
             guard let self = self else { return }
             switch result {
