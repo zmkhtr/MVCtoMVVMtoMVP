@@ -9,6 +9,7 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
+    private let viewModel = PersonViewModel()
     private var persons: [Person] = []
     
     public lazy var refreshController: UIRefreshControl = {
@@ -27,18 +28,7 @@ class PersonListViewController: UITableViewController {
     }
     
     @objc func load() {
-        tableView.refreshControl?.beginRefreshing()
-        loader.load { [weak self] result in
-            guard let self = self else { return }
-            self.tableView.refreshControl?.endRefreshing()
-            switch result {
-            case let .success(persons):
-                self.persons = persons
-                self.tableView.reloadData()
-            case let .failure(error):
-                self.showErrorAlert(errorMessage: error.localizedDescription)
-            }
-        }
+        viewModel.load()
     }
     
     private func showErrorAlert(errorMessage: String) {
