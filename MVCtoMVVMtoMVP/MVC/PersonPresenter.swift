@@ -16,10 +16,22 @@ protocol PersonViewDelegate: AnyObject {
 class PersonPresenter {
     private let loader = PersonLoader()
     
+    weak var delegate: PersonViewDelegate?
+    
     func load() {
+        delegate?.onLoadingStateChange(isLoading: true)
+        delegate?.onErrorStateChange(error: nil)
         
         loader.load { [weak self] result in
             guard let self = self else { return }
+            self.delegate?.onLoadingStateChange(isLoading: false)
+            
+            switch result {
+            case let .success(persons):
+                self.delegate?.onPersonsLoad(persons: persons)
+            case .failure:
+                self.delegate?.onErrorStateChange(error: "Error Fetching Data")
+            }
         }
     }
 }
