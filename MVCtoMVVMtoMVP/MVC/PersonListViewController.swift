@@ -9,7 +9,7 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-    private let viewModel = PersonViewModel()
+    private let presenter = PersonPresenter()
     private var persons: [Person] = []
     
     public lazy var refreshController: UIRefreshControl = {
@@ -24,34 +24,12 @@ class PersonListViewController: UITableViewController {
         
         tableView.refreshControl = refreshController
 
-        bindViewModel()
         load()
     }
     
     @objc func load() {
-        viewModel.load()
+        presenter.load()
     }
-    
-    func bindViewModel() {
-         viewModel.onPersonsLoad = { [weak self] persons in
-             guard let self = self else { return }
-             self.persons = persons
-             self.tableView.reloadData()
-         }
-         
-         viewModel.onLoadingStateChange = { [weak self] isLoading in
-             guard let self = self else { return }
-             let refreshControl = self.tableView.refreshControl
-             isLoading ? refreshControl?.beginRefreshing() : refreshControl?.endRefreshing()
-         }
-         
-         viewModel.onErrorStateChange = { [weak self] errorMessage in
-             guard let self = self else { return }
-             if let errorMessage {
-                 showErrorAlert(errorMessage: errorMessage)
-             }
-         }
-     }
     
     private func showErrorAlert(errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
