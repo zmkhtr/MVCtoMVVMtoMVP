@@ -8,12 +8,13 @@
 import Foundation
 
 class PersonViewModel {
-    
+    typealias Observer<T> = (T) -> Void
+
     private let loader = PersonLoader()
     
-    var onLoadingStateChange: ((Bool) -> Void)?
-    var onErrorStateChange:((String?) -> Void)?
-    var onPersonsLoad: (([Person]) -> Void)?
+    var onLoadingStateChange: Observer<Bool>?
+    var onErrorStateChange: Observer<String?>?
+    var onPersonsLoad: Observer<[Person]>?
     
     
     func load() {
