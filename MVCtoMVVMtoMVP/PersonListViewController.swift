@@ -37,9 +37,15 @@ class PersonListViewController: UITableViewController {
                 self.persons = persons
                 self.tableView.reloadData()
             case let .failure(error):
-                print("Handle \(error)")
+                self.showErrorAlert(errorMessage: error.localizedDescription)
             }
         }
+    }
+    
+    private func showErrorAlert(errorMessage: String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
