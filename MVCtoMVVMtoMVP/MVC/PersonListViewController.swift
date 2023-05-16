@@ -24,6 +24,7 @@ class PersonListViewController: UITableViewController {
         
         tableView.refreshControl = refreshController
 
+        presenter.delegate = self
         load()
     }
     
@@ -62,3 +63,19 @@ class PersonListViewController: UITableViewController {
     
 }
 
+extension PersonListViewController: PersonViewDelegate {
+    func onLoadingStateChange(isLoading: Bool) {
+        isLoading ? tableView.refreshControl?.beginRefreshing() : tableView.refreshControl?.endRefreshing()
+    }
+
+    func onErrorStateChange(error: String?) {
+        if let error {
+            showErrorAlert(errorMessage: error)
+        }
+    }
+
+    func onPersonsLoad(persons: [Person]) {
+        self.persons = persons
+        self.tableView.reloadData()
+    }
+}
