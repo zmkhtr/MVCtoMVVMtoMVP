@@ -41,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		206AD1312A13541900FB207F /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				20DE88CD2A12041000C23631 /* PersonListViewController.swift */,
+				206AD12D2A133BDA00FB207F /* Person.swift */,
+				206AD12F2A133C4900FB207F /* PersonLoader.swift */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
 		20DE88BD2A12041000C23631 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +70,13 @@
 		20DE88C82A12041000C23631 /* MVCtoMVVMtoMVP */ = {
 			isa = PBXGroup;
 			children = (
+				206AD1312A13541900FB207F /* MVC */,
 				20DE88C92A12041000C23631 /* AppDelegate.swift */,
 				20DE88CB2A12041000C23631 /* SceneDelegate.swift */,
-				20DE88CD2A12041000C23631 /* PersonListViewController.swift */,
 				20DE88CF2A12041000C23631 /* Main.storyboard */,
 				20DE88D22A12041200C23631 /* Assets.xcassets */,
 				20DE88D42A12041200C23631 /* LaunchScreen.storyboard */,
 				20DE88D72A12041200C23631 /* Info.plist */,
-				206AD12D2A133BDA00FB207F /* Person.swift */,
-				206AD12F2A133C4900FB207F /* PersonLoader.swift */,
 			);
 			path = MVCtoMVVMtoMVP;
 			sourceTree = "<group>";
