@@ -28,8 +28,10 @@ class PersonListViewController: UITableViewController {
     }
     
     @objc func load() {
+        tableView.refreshControl?.beginRefreshing()
         loader.load { [weak self] result in
             guard let self = self else { return }
+            self.tableView.refreshControl?.endRefreshing()
             switch result {
             case let .success(persons):
                 self.persons = persons
