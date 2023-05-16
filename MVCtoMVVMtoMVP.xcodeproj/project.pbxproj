@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206AD12E2A133BDA00FB207F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AD12D2A133BDA00FB207F /* Person.swift */; };
 		20DE88CA2A12041000C23631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88C92A12041000C23631 /* AppDelegate.swift */; };
 		20DE88CC2A12041000C23631 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88CB2A12041000C23631 /* SceneDelegate.swift */; };
 		20DE88CE2A12041000C23631 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE88CD2A12041000C23631 /* PersonListViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		206AD12D2A133BDA00FB207F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		20DE88C62A12041000C23631 /* MVCtoMVVMtoMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCtoMVVMtoMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DE88C92A12041000C23631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DE88CB2A12041000C23631 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				20DE88D22A12041200C23631 /* Assets.xcassets */,
 				20DE88D42A12041200C23631 /* LaunchScreen.storyboard */,
 				20DE88D72A12041200C23631 /* Info.plist */,
+				206AD12D2A133BDA00FB207F /* Person.swift */,
 			);
 			path = MVCtoMVVMtoMVP;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				20DE88CE2A12041000C23631 /* PersonListViewController.swift in Sources */,
 				20DE88CA2A12041000C23631 /* AppDelegate.swift in Sources */,
+				206AD12E2A133BDA00FB207F /* Person.swift in Sources */,
 				20DE88CC2A12041000C23631 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
